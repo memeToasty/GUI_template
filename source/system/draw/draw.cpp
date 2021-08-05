@@ -413,10 +413,7 @@ Result_with_string Draw_load_texture(std::string file_name, int sheet_map_num, C
 			result.string = "[Error] num of arry " + std::to_string(num_of_array) + " is bigger than spritesheet has num of image(s) " + std::to_string(num_of_images) + " ";
 			function_fail = true;
 		}
-	}
-
-	if (!function_fail)
-	{
+		
 		for (int i = 0; i <= (num_of_array - 1); i++)
 			return_image[start_num + i] = C2D_SpriteSheetGetImage(sheet_texture[sheet_map_num], i);
 	}
